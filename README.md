@@ -1,2 +1,2 @@
 # Trip-Trekker
-Trip planner capable of suggesting time-efficient, activity-aware itineraries by dynamically computing and evaluating multiple paths
+> Trip‑Trekker is an intelligent trip planner that generates time‑efficient, activity‑aware itineraries by dynamically computing and evaluating multiple possible travel paths. It combines a React (Vite + Tailwind) frontend with a C++ core engine to handle route and schedule optimization, offering dedicated views for traffic, activities, hotels, emergency info, weather, packing, and budget planning.
