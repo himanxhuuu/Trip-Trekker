@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@layer components {
+  .nav-link {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold text-slate-600 transition hover:bg-skyglass-100 hover:text-skyglass-800 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white;
+  }
+
+  .nav-link-active {
+    @apply bg-skyglass-500 text-white shadow-lift hover:bg-skyglass-500 hover:text-white dark:bg-skyglass-500 dark:text-white;
+  }
+
+  .icon-button {
+    @apply grid h-11 w-11 place-items-center rounded-full border border-skyglass-100 bg-white text-skyglass-800 shadow-sm transition hover:-translate-y-0.5 hover:bg-skyglass-50 hover:shadow-lift dark:border-slate-700 dark:bg-slate-900 dark:text-skyglass-200 dark:hover:bg-slate-800;
+  }
+
+  .panel {
+    @apply rounded-[8px] border border-white/80 bg-white/90 shadow-lift backdrop-blur-xl dark:border-slate-700/80 dark:bg-slate-900/90;
+  }
+
+  .card {
+    @apply rounded-[8px] border border-skyglass-100 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-skyglass-300 hover:shadow-lift dark:border-slate-700 dark:bg-slate-900 dark:hover:border-skyglass-500;
+  }
+
+  .field-label {
+    @apply text-sm font-bold text-slate-700 dark:text-slate-200;
+  }
+
+  .input {
+    @apply w-full rounded-[8px] border border-skyglass-100 bg-white px-4 py-3 text-sm font-semibold outline-none transition focus:border-skyglass-400 focus:ring-4 focus:ring-skyglass-100 dark:border-slate-700 dark:bg-slate-950 dark:text-white dark:focus:ring-skyglass-900;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-[8px] bg-skyglass-500 px-5 py-3 text-sm font-black text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-skyglass-600 disabled:cursor-not-allowed disabled:bg-slate-300 disabled:shadow-none dark:disabled:bg-slate-700;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-[8px] border border-skyglass-200 bg-white px-5 py-3 text-sm font-black text-skyglass-800 transition hover:-translate-y-0.5 hover:bg-skyglass-50 dark:border-slate-700 dark:bg-slate-900 dark:text-skyglass-100 dark:hover:bg-slate-800;
+  }
+
+  .page-title {
+    @apply text-3xl font-black tracking-tight text-slate-950 dark:text-white sm:text-4xl;
+  }
+
+  .muted {
+    @apply text-sm leading-6 text-slate-600 dark:text-slate-300;
+  }
+}
+
+.graph-wrapper .graph-container {
+  border-radius: 8px;
+}
+
+.rd3g-link {
+  transition: stroke 0.3s ease, stroke-width 0.3s ease, opacity 0.3s ease;
+}
+
+.rd3g-node {
+  cursor: pointer;
+  transition: filter 0.25s ease;
+}
+
+.rd3g-node:hover {
+  filter: drop-shadow(0 8px 16px rgba(14, 174, 230, 0.35));
+}
